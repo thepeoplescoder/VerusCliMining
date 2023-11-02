@@ -14,21 +14,37 @@ GITHUB_DOWNLOAD_NAME=$(echo $GITHUB_RELEASE_JSON | jq -r ".[0].assets | .[] | .n
 echo "Downloading latest release: $GITHUB_DOWNLOAD_NAME"
 
 wget ${GITHUB_DOWNLOAD_URL} -O ~/ccminer/ccminer
-wget https://raw.githubusercontent.com/TheRetroMike/VerusCliMining/main/config.json -O ~/ccminer/config.json
+wget https://raw.githubusercontent.com/thepeoplescoder/VerusCliMining/main/config.json -O ~/ccminer/config.json
 chmod +x ~/ccminer/ccminer
 
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
 ~/ccminer/ccminer -c ~/ccminer/config.json
 EOF
+
 chmod +x start.sh
 
 echo "setup nearly complete."
-echo "Edit the config with \"nano ~/ccminer/config.json\""
-
-echo "go to line 15 and change your worker name"
+echo
+echo "Config files in .json format exist in the ~/ccminer directory."
+echo
+echo "Once you make that directory the current directory, you can copy"
+echo "any of the following files"
+echo
+(cd ~/ccminer && ls -1 config.*.json)
+echo
+echo "to config.json."
+echo
+echo "Edit the config with \"nano ~/ccminer/config.json\","
+echo "and then replace:"
+echo
+echo "   YOUR_WALLET_ADDRESS with your wallet address"
+echo "   YOUR_DEVICE_NAME with a name to identify this device when viewing pool stats"
+echo
 echo "use \"<CTRL>-x\" to exit and respond with"
 echo "\"y\" on the question to save and \"enter\""
 echo "on the name"
-
+echo
 echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
+echo
+echo "Be sure that you copied one of the ~/ccminer/config.*.json files to ~/ccminer/config.json !!!!!"
