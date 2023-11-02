@@ -24,20 +24,25 @@ EOF
 
 chmod +x start.sh
 
+COLOR_CYAN="\e[1;96m"
+COLOR_RESET="\e[0m"
 echo "setup nearly complete."
 echo
-echo "Config files in .json format exist in the ~/ccminer directory."
+echo "Config files in .json format exist in"
+echo "the ~/ccminer directory."
 echo
-echo "Once you make that directory the current directory, you can copy"
-echo "any of the following files"
-echo
-(cd ~/ccminer && ls -1 config.*.json)
-echo
+echo "Once you make that directory the current"
+echo "directory, you can copy any of the"
+echo "following files"
+echo -e "$COLOR_CYAN"
+    ls -1 config.*.json
+echo -e "$COLOR_RESET"
 echo "to config.json."
 echo
-echo "Edit the config with \"nano ~/ccminer/config.json\","
-echo "and then replace:"
+echo "Edit the config with"
+echo -e "   ${COLOR_CYAN}nano ~/ccminer/config.json${COLOR_RESET}"
 echo
+echo "and then replace:"
 echo "   YOUR_WALLET_ADDRESS with your wallet address"
 echo "   YOUR_DEVICE_NAME with a name to identify this device when viewing pool stats"
 echo
