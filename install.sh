@@ -56,6 +56,8 @@ echo "use \"<CTRL>-x\" to exit and respond with"
 echo "\"y\" on the question to save and \"enter\""
 echo "on the name"
 echo
-echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
+echo "start the miner with"
+echo -e "   ${COLOR_CYAN}cd ~/ccminer; ./start.sh${COLOR_RESET}"
 echo
-echo "Be sure that you copied one of the ~/ccminer/config.*.json files to ~/ccminer/config.json !!!!!"
+echo -e "Be sure that you copied one of the ${COLOR_CYAN}~/ccminer/config.*.json${COLOR_RESET}"
+echo -e "files to ${COLOR_CYAN}~/ccminer/config.json${COLOR_RESET}!!!!!"
