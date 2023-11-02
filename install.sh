@@ -59,5 +59,6 @@ echo
 echo "start the miner with"
 echo -e "   ${COLOR_CYAN}cd ~/ccminer; ./start.sh${COLOR_RESET}"
 echo
-echo -e "Be sure that you copied one of the ${COLOR_CYAN}~/ccminer/config.*.json${COLOR_RESET}"
+echo "Be sure that you copied one of"
+echo -e "the ${COLOR_CYAN}~/ccminer/config.*.json${COLOR_RESET}"
 echo -e "files to ${COLOR_CYAN}~/ccminer/config.json${COLOR_RESET}!!!!!"
