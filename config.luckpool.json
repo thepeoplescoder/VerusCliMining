@@ -16,7 +16,7 @@
             "timeout": 150
         }
     ],
-    "user": "YOUR_WALLET_ADDRESS.YOUR_DEVICE_USERNAME",
+    "user": "YOUR_WALLET_ADDRESS.YOUR_DEVICE_NAME",
     "pass": "x",
     "algo": "verus",
     "threads": 8,
